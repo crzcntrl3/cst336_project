@@ -191,6 +191,73 @@ a {
   text-shadow:2px 2px black;
 }
 
+.card {
+  font-size:15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  top:25%;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(0,0,0,0.4);
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #f44336;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.accountContainer{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  margin: 20px;
+  max-width: 80%;
+  padding: 20px;
+  color:white;
+  text-shadow:2px 2px black;
+}
+
 footer{
   text-align:center;
 }

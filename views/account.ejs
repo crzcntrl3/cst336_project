@@ -3,21 +3,28 @@
         <!--background image-->
         <div class="bg-image">
             <%- include('partials/nav.ejs') %>
-                <h1 class="display-4">Bounty Hunters</h1>
-                <h1 class="display-4" >Connect</h1>
-                <hr>
-            <form class="logincontainer" action="/login" method="POST">
-                <h1 style="color:white;text-align:center;text-shadow:2px 2px black">Login</h1>
-                    <label for="username" style="color:white; font-size:20px;text-shadow:2px 2px black"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
+            <div class="accountContainer">
+                <form action="/changePassword" method="POST">
+                    <h2>Change Password</h2>
+                    <label for="currentPassword">Current Password</label>
+                    <input type="text" id="currentPassword" name="currentPassword" placeholder="Enter Current Password">
+                    
+                    <label for="newPassword">New Password</label>
+                    <input type="text" id="newPassword" name="newPassword" placeholder="Enter New Password">
+                    
+                    <label for="cNewPassword">Confirm New Password</label>
+                    <input type="text" id="cNewPassword" name="cNewPassword" placeholder="Confirm New Password">
+                    
+                    <button class="btn btn-primary">Confirm Password Change</button>
+                </form><hr>
+                <form action="removeAccount" method="POST">
+                    <h2>Remove Account</h2>
+                    <label for="removeAccount">Current Password</label>
+                    <input type="password" id="removalPassword" name="removalPassword" placeholder="Enter Current Password">
+                    <button class="btn btn-danger">Confirm Account Removal</button>
+                </form>
+            </div>
 
-                    <label for="password" style="color:white; font-size:20px;text-shadow:2px 2px black"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
-
-                    <button type="submit" class="loginbtn" style="text-shadow:2px 2px black">Login</button>
-                    <hr>
-                    <a href="/register" style="text-shadow:2px 2px black">This is the way (register account)</a>
-            </form>
         </div>
-                    <!-- Footer.ejs -->
+<!-- Footer.ejs -->
 <%- include('partials/footer.ejs') %>
