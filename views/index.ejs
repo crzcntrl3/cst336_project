@@ -1,0 +1,25 @@
+<!-- header.ejs --->
+<%- include('partials/header.ejs') %>
+        <!--background image-->
+        <div class="bg-image">
+            <%- include('partials/nav.ejs') %>
+            <div class="headercontainer">
+                <h1 class="display-4">Bounty Hunters</h1>
+                <h1 class="display-4" >Connect</h1>
+                <hr>
+            </div>
+            <form class="logincontainer" action="/login" method="POST">
+                <h1 style="color:white;text-align:center;text-shadow:2px 2px black">Login</h1>
+                    <label for="username" style="color:white; font-size:20px;text-shadow:2px 2px black"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+
+                    <label for="password" style="color:white; font-size:20px;text-shadow:2px 2px black"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+
+                    <button type="submit" class="loginbtn" style="text-shadow:2px 2px black">Login</button>
+                    <hr>
+                    <a href="/register" style="text-shadow:2px 2px black">This is the way (register account)</a>
+            </form>
+        </div>
+                    <!-- Footer.ejs -->
+<%- include('partials/footer.ejs') %>

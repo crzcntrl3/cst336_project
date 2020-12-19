@@ -1,0 +1,26 @@
+<!-- header.ejs --->
+<%- include('partials/header.ejs') %>
+        <div class="bg-image">
+            <%- include('partials/nav.ejs') %>
+            <div class="contactHead">
+                <h1 class="display-2">Contact</h1>
+                <div class="containerContact">
+                    <form action="action_page.php">
+
+                        <label for="where">Where</label>
+                        <input type="text" id="where" name="where" placeholder="Location..">
+
+                        <label for="when">When</label>
+                        <input type="text" id="when" name="when" placeholder="Date/Time..">
+
+                        <label for="request">Special Request</label>
+                        <textarea id="request" name="request" placeholder="Write something.." style="height:200px; background-color: rgba(0,0,0,0.4)"></textarea>
+
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+<!-- Footer.ejs -->
+<%- include('partials/footer.ejs') %>
